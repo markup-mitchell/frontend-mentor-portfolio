@@ -26,7 +26,11 @@ module.exports = {
       ],
       serif: ['"Ibarra Real Nova"', 'serif']
     },
-    extend: {}
+    extend: {
+      letterSpacing: {
+        '2': '2px'  
+      }
+    }
   },
   variants: {},
   plugins: [],

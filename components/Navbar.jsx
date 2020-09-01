@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import Transition from '../Transition.js';
+import Transition from "../Transition.js";
 
+import MenuLink from "../components/MenuLink";
 const Navbar = () => {
   let [menuOpen, toggleMenu] = useState(false);
   return (
-    <div className="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
-        <nav className="relative flex items-center justify-between sm:h-10 md:justify-center">
+    <div className="relative pt-8 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
+      <div className="max-w-screen-xl mx-auto sm:px-6">
+        <nav className="relative px-8 flex items-center justify-between sm:h-10 md:justify-center">
           <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
             <div className="flex items-center justify-between w-full md:w-auto">
               <a href="#" aria-label="Home">
@@ -19,7 +20,7 @@ const Navbar = () => {
               <div className="-mr-2 flex items-center md:hidden">
                 <button
                   type="button"
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out border-p1"
+                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:shadow-outline focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out border-p1"
                   id="main-menu"
                   aria-label="Main menu"
                   aria-haspopup="true"
@@ -79,7 +80,7 @@ const Navbar = () => {
       </div>
 
       {/* mobile menu */}
-        <Transition
+      <Transition
         show={menuOpen}
         enter="duration-150 ease-out"
         enterFrom="opacity-0 scale-95"
@@ -87,70 +88,46 @@ const Navbar = () => {
         leave="duration-100 ease-in"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
-        >
-     
-        <div className="absolute top-0 right-0 p-2 transition transform origin-top-right md:hidden w-64">
-      
-            <div
-              className="bg-white overflow-hidden z-10"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="main-menu"
-            >
-              <div className="px-5 pt-4 flex items-center justify-end">
-                <div className="-mr-2">
-                  <button
-                    type="button"
-                    className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                    aria-label="Close menu"
-                    onClick={() => toggleMenu(!menuOpen)}
+      >
+        <div className="absolute top-0 right-0 pt-8 pr-8 transition transform origin-top-right md:hidden w-64">
+          <div
+            className="bg-white overflow-hidden z-10"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="main-menu"
+          >
+            <div className="flex items-center justify-end">
+              <div className="-mr-2">
+                <button
+                  type="button"
+                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                  aria-label="Close menu"
+                  onClick={() => toggleMenu(!menuOpen)}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="19"
+                    fill="currentColor"
+                    className="text-p3"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="19"
-                      fill="currentColor"
-                      class="text-p3"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M17.132.661l.707.707L9.707 9.5l8.132 8.132-.707.707L9 10.207.868 18.34l-.707-.707L8.293 9.5.161 1.368.868.661 9 8.793 17.132.661z"
-                      />
-                    </svg>
-                  </button>
-                </div>
+                    <path
+                      fillRule="evenodd"
+                      d="M17.132.661l.707.707L9.707 9.5l8.132 8.132-.707.707L9 10.207.868 18.34l-.707-.707L8.293 9.5.161 1.368.868.661 9 8.793 17.132.661z"
+                    />
+                  </svg>
+                </button>
               </div>
-              <div className="mt-6 py-10 bg-p3 text-s1 shadow-md gap-y-8 flex flex-col">
-                <a
-                  href="#"
-                  className="block rounded-md text-xs font-semibold text-white hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out text-center "
-                  role="menuitem"
-                >
-                  HOME
-                </a>
-                <a
-                  href="#"
-                  className="block  rounded-md text-xs font-semibold text-white hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out text-center "
-                  role="menuitem"
-                >
-                  PORTFOLIO
-                </a>
-                <a
-                  href="#"
-                  className="block rounded-md text-xs font-semibold text-white hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out text-center "
-                  role="menuitem"
-                >
-                  CONTACT ME
-                </a>
-         
-              </div>
-      
+            </div>
+            <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col">
+              {/* gap-y-X is not going to work on ios or safari, and will need fallback. build it so we don't need multiple implementations */}
+              <MenuLink url="#">HOME</MenuLink>
+              <MenuLink url='#'>PORTFOLIO</MenuLink>
+              <MenuLink url="#">CONTACT ME</MenuLink>
             </div>
           </div>
-        
-             
-        </Transition>
-     
+        </div>
+      </Transition>
     </div>
   );
 };
