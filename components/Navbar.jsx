@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import Transition from '@tailwindui/react';
 
 const Navbar = () => {
   let [menuOpen, toggleMenu] = useState(false);
   return (
-    <div className="relative bg-gray-50 overflow-hidden">
+   
       <div className="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
           <nav className="relative flex items-center justify-between sm:h-10 md:justify-center">
@@ -163,7 +162,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </div>
+   
   );
 };
 
