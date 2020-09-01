@@ -32,3 +32,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# starter code and assets
+
+/design
