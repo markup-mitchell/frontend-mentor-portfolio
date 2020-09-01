@@ -7,7 +7,8 @@ module.exports = {
       p3: '#33323D',
       s1: '#FAFAFA',
       s2: '#EAEAEB',
-      s3: '#F43030'
+      s3: '#F43030',
+      white: '#FFFFFF'
     },
     fontFamily: {
       sans: [

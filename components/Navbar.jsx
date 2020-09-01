@@ -78,42 +78,26 @@ const Navbar = () => {
         </nav>
       </div>
 
-      {
-        // Mobile menu, show/hide based on menu open state.
-        //Entering: "duration-150 ease-out"
-        // From: "opacity-0 scale-95"
-        // To: "opacity-100 scale-100"
-        // Leaving: "duration-100 ease-in"
-        // From: "opacity-100 scale-100"
-        // To: "opacity-0 scale-95"
-      }
-
+      {/* mobile menu */}
         <Transition
         show={menuOpen}
-        enter="transition ease-out duration-100 transform"
+        enter="duration-150 ease-out"
         enterFrom="opacity-0 scale-95"
         enterTo="opacity-100 scale-100"
-        leave="transition ease-in duration-75 transform"
+        leave="duration-100 ease-in"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
         >
      
-        <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-          <div className="rounded-lg shadow-md">
+        <div className="absolute top-0 right-0 p-2 transition transform origin-top-right md:hidden w-64">
+      
             <div
-              className="rounded-lg bg-s1 shadow-xs overflow-hidden z-10"
+              className="bg-white overflow-hidden z-10"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="main-menu"
             >
-              <div className="px-5 pt-4 flex items-center justify-between">
-                <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                    alt=""
-                  ></img>
-                </div>
+              <div className="px-5 pt-4 flex items-center justify-end">
                 <div className="-mr-2">
                   <button
                     type="button"
@@ -121,75 +105,49 @@ const Navbar = () => {
                     aria-label="Close menu"
                     onClick={() => toggleMenu(!menuOpen)}
                   >
-                    {/* <svg
-                        className="h-6 w-6"
-                        stroke="currentColor"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLineCap="round"
-                          strokeLineJoin="round"
-                          strokeWidth="2"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg> */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="18"
                       height="19"
+                      fill="currentColor"
+                      class="text-p3"
                     >
                       <path
-                        fill="#33323D"
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M17.132.661l.707.707L9.707 9.5l8.132 8.132-.707.707L9 10.207.868 18.34l-.707-.707L8.293 9.5.161 1.368.868.661 9 8.793 17.132.661z"
                       />
                     </svg>
                   </button>
                 </div>
               </div>
-              <div className="px-2 pt-2 pb-3">
+              <div className="mt-6 py-10 bg-p3 text-s1 shadow-md gap-y-8 flex flex-col">
                 <a
                   href="#"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                  className="block rounded-md text-xs font-semibold text-white hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out text-center "
                   role="menuitem"
                 >
-                  Product
+                  HOME
                 </a>
                 <a
                   href="#"
-                  className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                  className="block  rounded-md text-xs font-semibold text-white hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out text-center "
                   role="menuitem"
                 >
-                  Features
+                  PORTFOLIO
                 </a>
                 <a
                   href="#"
-                  className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                  className="block rounded-md text-xs font-semibold text-white hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out text-center "
                   role="menuitem"
                 >
-                  Marketplace
+                  CONTACT ME
                 </a>
-                <a
-                  href="#"
-                  className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Company
-                </a>
+         
               </div>
-              <div>
-                <a
-                  href="#"
-                  className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Log in
-                </a>
-              </div>
+      
             </div>
           </div>
-        </div>
+        
              
         </Transition>
      
