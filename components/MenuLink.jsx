@@ -1,5 +1,3 @@
-import React from "react";
-
 const MenuLink = ({url, children}) => {
   return (
     <a

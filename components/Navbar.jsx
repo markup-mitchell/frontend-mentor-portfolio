@@ -20,19 +20,22 @@ const Navbar = () => {
               <div className="-mr-2 flex items-center md:hidden">
                 <button
                   type="button"
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:shadow-outline focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out border-p1"
+                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 focus:shadow-outline
+                  focus:outline-none
+                  transition duration-150 ease-in-out border-p1"
                   id="main-menu"
                   aria-label="Main menu"
                   aria-haspopup="true"
                   onClick={() => toggleMenu(!menuOpen)}
                 >
                   <svg
-                    className="text-p1"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
-                    height="13"
+                    height="16"
+                    stroke="currentColor"
+                    viewBox="0 -2 24 16"
                   >
-                    <g stroke="currentColor" fillRule="evenodd">
+                    <g  fillRule="evenodd">
                       <path d="M0 0h24v1H0zM0 6h24v1H0zM0 12h24v1H0z" />
                     </g>
                   </svg>
@@ -91,16 +94,17 @@ const Navbar = () => {
       >
         <div className="absolute top-0 right-0 pt-8 pr-8 transition transform origin-top-right md:hidden w-64">
           <div
-            className="bg-white overflow-hidden z-10"
+            className="bg-transparent overflow-hidden z-10"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="main-menu"
           >
             <div className="flex items-center justify-end">
-              <div className="-mr-2">
+         
                 <button
                   type="button"
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                  className="inline-flex items-center justify-center p-2
+                  bg-white rounded-md focus:outline-none  transition duration-150 ease-in-out"
                   aria-label="Close menu"
                   onClick={() => toggleMenu(!menuOpen)}
                 >
@@ -117,7 +121,7 @@ const Navbar = () => {
                     />
                   </svg>
                 </button>
-              </div>
+           
             </div>
             <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col">
               {/* gap-y-X is not going to work on ios or safari, and will need fallback. build it so we don't need multiple implementations */}
