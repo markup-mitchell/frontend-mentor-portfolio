@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Transition from "../Transition.js";
-import { useRouter } from 'next/router'
 
 import MenuLinkMobile from "./Links/MenuLinkMobile";
 import MenuLink from "./Links/MenuLink";
