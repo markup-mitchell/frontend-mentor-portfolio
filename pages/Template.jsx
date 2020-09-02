@@ -3,18 +3,24 @@ import Footer from '../components/Footer';
 
 const Template = ({children, menuOpen, toggleMenu}) => {
   return (
-    <>
+    <div className="relative min-h-screen">
     {/* page layout */}
-    <div className="w-full px-8 pt-8 md:px-10 md:pt-16 xl:px-0 relative">
-      <header className="max-w-6xl mx-auto relative">
+    <div className="w-full h-full px-8 pt-8 md:px-10 md:pt-16 xl:px-0">
+      <div className="max-w-6xl mx-auto relative">
+
+      <header>
         <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu}/>
-        <div className="mt-10 md:mt-12 xl:mt-16">
-            {children}
-        </div>
       </header>
+      <div className="mt-10 md:mt-12 xl:mt-16 h-full">
+        {children}
+      </div>
     </div>
-    <Footer></Footer>
-    </>
+      </div>
+      <div className="absolute bottom-0 w-full">
+
+    <Footer/>
+      </div>
+    </div>
   )
 }
 

@@ -95,17 +95,26 @@ const Navbar = ({menuOpen, toggleMenu}) => {
                 </IconButton>
               </div>
             </div>
-            <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col">
+            <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col items-center">
               {/* gap-y-X is not going to work on ios or safari, and will need fallback. build it so we don't need multiple implementations */}
+              <div className="mt-8">
+
               <MenuLinkMobile href="/">
                 HOME
               </MenuLinkMobile>
+              </div>
+              <div className="mt-8">
+
               <MenuLinkMobile href="/portfolio">
                 PORTFOLIO
               </MenuLinkMobile>
+              </div>
+              <div className="mt-8">
+
               <MenuLinkMobile href="/contact">
                 CONTACT ME
               </MenuLinkMobile>
+              </div>
             </div>
           </div>
         </div>
