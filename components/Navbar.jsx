@@ -1,11 +1,9 @@
-import React, { useState } from "react";
 import Transition from "../Transition.js";
 
 import MenuLinkMobile from "./Links/MenuLinkMobile";
 import MenuLink from "./Links/MenuLink";
 import IconButton from "./Buttons/IconButton.jsx";
-const Navbar = () => {
-  let [menuOpen, toggleMenu] = useState(false);
+const Navbar = ({menuOpen, toggleMenu}) => {
   return (
     <div className="relative">
       <nav className="flex items-center justify-end sm:h-10">
@@ -79,7 +77,7 @@ const Navbar = () => {
               <div className="-mr-3">
                 <IconButton
                   ariaLabel="Close Menu"
-                  handler={() => toggleMenu(!menuOpen)}
+                  handler={toggleMenu}
                 >
                   <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -97,15 +95,15 @@ const Navbar = () => {
                 </IconButton>
               </div>
             </div>
-            <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md">
+            <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col">
               {/* gap-y-X is not going to work on ios or safari, and will need fallback. build it so we don't need multiple implementations */}
-              <MenuLinkMobile url="#">
+              <MenuLinkMobile href="/">
                 HOME
               </MenuLinkMobile>
-              <MenuLinkMobile url="#">
+              <MenuLinkMobile href="/portfolio">
                 PORTFOLIO
               </MenuLinkMobile>
-              <MenuLinkMobile url="#">
+              <MenuLinkMobile href="/contact">
                 CONTACT ME
               </MenuLinkMobile>
             </div>

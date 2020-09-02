@@ -6,7 +6,7 @@ const MenuLink = ({ slug, children }) =>  {
   return (
     <Link href={slug}>
         <a
-          className={`font-medium text-xs ${router.pathname === slug ? "text-p1" : "text-p3"} font-semibold tracking-2 leading-none my-auto transition-colors duration-100 ease-in`}
+          className={`font-medium text-xs ${router.pathname === slug ? "text-p1" : "text-p3"} font-semibold tracking-2 leading-none my-auto transition-colors duration-300 ease-in-out`}
         >
         {children}
       </a>           
