@@ -29,6 +29,9 @@ module.exports = {
     extend: {
       letterSpacing: {
         '2': '2px'  
+      },
+      boxShadow: {
+        outline: '0 0 0 3px rgba(95, 180, 162, 0.5)',
       }
     }
   },

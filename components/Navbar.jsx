@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Transition from "../Transition.js";
 
 import MenuLink from "../components/MenuLink";
+import IconButton from "./Buttons/IconButton.jsx";
 const Navbar = () => {
   let [menuOpen, toggleMenu] = useState(false);
   return (
@@ -30,12 +31,13 @@ const Navbar = () => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="16"
-                    stroke="currentColor"
+                    width="22"
+                    height="18"
+                    fill="currentColor"
                     viewBox="0 -2 24 16"
+                    strokeWidth="0"
                   >
-                    <g  fillRule="evenodd">
+                    <g fillRule="evenodd">
                       <path d="M0 0h24v1H0zM0 6h24v1H0zM0 12h24v1H0z" />
                     </g>
                   </svg>
@@ -100,33 +102,30 @@ const Navbar = () => {
             aria-labelledby="main-menu"
           >
             <div className="flex items-center justify-end">
-         
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center p-2
-                  bg-white rounded-md focus:outline-none  transition duration-150 ease-in-out"
-                  aria-label="Close menu"
-                  onClick={() => toggleMenu(!menuOpen)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="19"
-                    fill="currentColor"
-                    className="text-p3"
+              <div className="-mr-3">
+
+              <IconButton ariaLabel="Close Menu" handler={() => toggleMenu(!menuOpen)}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="18"
+                  viewBox="-1 0 24 18"
+                  fill="currentColor"
+                  
+                  className="text-p3"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M17.132.661l.707.707L9.707 9.5l8.132 8.132-.707.707L9 10.207.868 18.34l-.707-.707L8.293 9.5.161 1.368.868.661 9 8.793 17.132.661z"
+                  <path
+                    fillRule="evenodd"
+                    d="M17.132.661l.707.707L9.707 9.5l8.132 8.132-.707.707L9 10.207.868 18.34l-.707-.707L8.293 9.5.161 1.368.868.661 9 8.793 17.132.661z"
                     />
-                  </svg>
-                </button>
-           
+                </svg>
+              </IconButton>
+                    </div>
             </div>
             <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col">
               {/* gap-y-X is not going to work on ios or safari, and will need fallback. build it so we don't need multiple implementations */}
               <MenuLink url="#">HOME</MenuLink>
-              <MenuLink url='#'>PORTFOLIO</MenuLink>
+              <MenuLink url="#">PORTFOLIO</MenuLink>
               <MenuLink url="#">CONTACT ME</MenuLink>
             </div>
           </div>
