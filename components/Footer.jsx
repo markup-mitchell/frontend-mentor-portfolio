@@ -2,11 +2,11 @@ import MenuLinkMobile from '../components/Links/MenuLinkMobile';
 
 const Footer = () => {
   return (
-    <footer className="py-12 bg-p3">
-      <div className="py-2 flex flex-col items-center">
+    <footer className="py-12 md:py-6 bg-p3 px-8 pt-8 md:px-10 xl:px-0 ">
+      <div className="py-2 md:py-0 flex flex-col md:flex-row items-center max-w-6xl mx-auto">
       <svg xmlns="http://www.w3.org/2000/svg"
       className="text-white" width="61" height="32"><path fill="currentColor" fillRule="evenodd" d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"/></svg>
-      <div className="mt-2  pb-10 bg-p3 text-s1 flex flex-col">
+      <div className="mt-2  pb-10 md:pb-0 bg-p3 text-s1 flex flex-col md:flex-row">
               <MenuLinkMobile href="/">
                 HOME
               </MenuLinkMobile>
