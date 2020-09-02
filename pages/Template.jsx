@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar';
-
+import Footer from '../components/Footer';
 
 const Template = ({children, menuOpen, toggleMenu}) => {
   return (
@@ -13,7 +13,7 @@ const Template = ({children, menuOpen, toggleMenu}) => {
         </div>
       </header>
     </div>
-    
+    <Footer></Footer>
     </>
   )
 }
