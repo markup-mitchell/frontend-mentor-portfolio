@@ -32,6 +32,10 @@ module.exports = {
         11: "3.5rem",
         7: "1.75rem",
       },
+      margin: {
+        11: "3.5rem",
+        7: "1.75rem",
+      },
       letterSpacing: {
         2: "2px",
       },

@@ -38,6 +38,7 @@ export default function Home() {
             <button className="border p-4">About Me</button>
           </div>
         </section>
+
         <section className="sm:flex justify-between md:justify-start">
           <picture className="object-contain">
             <source
