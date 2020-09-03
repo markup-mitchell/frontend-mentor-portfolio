@@ -44,6 +44,7 @@ const Navbar = ({menuOpen, toggleMenu}) => {
             </div>
           </div>
         </div>
+        {/* will space-x-10 work on ios? */}
         <div className="hidden md:flex md:space-x-10">
           <MenuLink slug="/">
             HOME
@@ -95,23 +96,23 @@ const Navbar = ({menuOpen, toggleMenu}) => {
                 </IconButton>
               </div>
             </div>
-            <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col items-center">
+            <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col items-center" role="menu">
               {/* gap-y-X is not going to work on ios or safari, and will need fallback. build it so we don't need multiple implementations */}
-              <div className="mt-8">
+              <div className="mt-8" role="menuitem">
 
               <MenuLinkMobile href="/">
                 HOME
-              </MenuLinkMobile>
+              </MenuLinkMobile >
               </div>
               <div className="mt-8">
 
-              <MenuLinkMobile href="/portfolio">
+              <MenuLinkMobile href="/portfolio" role="menuitem">
                 PORTFOLIO
               </MenuLinkMobile>
               </div>
-              <div className="mt-8">
+              <div className="mt-8" role="menuitem">
 
-              <MenuLinkMobile href="/contact">
+              <MenuLinkMobile href="/contact" >
                 CONTACT ME
               </MenuLinkMobile>
               </div>
