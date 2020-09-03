@@ -30,6 +30,9 @@ module.exports = {
       letterSpacing: {
         '2': '2px'  
       },
+      fontSize: {
+        '40': '2.5rem'
+      },
       boxShadow: {
         outline: '0 0 0 3px rgba(95, 180, 162, 0.5)',
       }
