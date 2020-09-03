@@ -85,15 +85,17 @@ export default function Home() {
             <div className="border-b mt-8 border-p3 opacity-25" />
           </div>
         </section>
-        <section className="flex flex-col items-center pt-20 pb-24 md:flex-row">
+        <section className="flex flex-col items-center pt-20 pb-24 xl:py-40 md:flex-row">
           <h2 className="text-40 font-serif text-center leading-tight font-bold text-p3">
-            <span className="whitespace-no-wrap">Interested in doing a</span>{" "}
+            <span className="md:whitespace-no-wrap">Interested in doing</span>{" "}
             <br className="hidden md:block" />
-            <span className="whitespace-no-wrap">project together?</span>
+            <span className="md:whitespace-no-wrap"> a project together?</span>
           </h2>
-          <div className="border-b mt-8 border-p3 opacity-25 w-full mx-8" />
-          <div className="mt-10">
-            <button className="border p-4 w-full">CONTACT ME</button>
+          <div className="hidden md:block border-b border-p3 opacity-25 w-full mx-8" />
+          <div className="mt-10 md:mt-0">
+            <button className="border p-4 w-full whitespace-no-wrap">
+              CONTACT ME
+            </button>
           </div>
         </section>
       </main>
