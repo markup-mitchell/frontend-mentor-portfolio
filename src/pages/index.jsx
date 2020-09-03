@@ -38,7 +38,7 @@ export default function Home() {
             <button className="border p-4">About Me</button>
           </div>
         </section>
-        <section className="mb-10 sm:flex justify-between md:justify-start">
+        <section className="sm:flex justify-between md:justify-start">
           <picture className="object-contain">
             <source
               media="(min-width: 1440px)"
@@ -62,11 +62,11 @@ export default function Home() {
           <div className="flex flex-col justify-between w-full sm:ml-8 md:ml-16 md:max-w-xs lg:max-w-sm lg:ml-24 xl:ml-32">
             <div className="border-b my-8 sm:mt-0 border-p3 opacity-25" />
             <div>
-              <h2 className="text-40 font-serif font-bold tracking-tight leading-none">
+              <h2 className="text-40 text-p3 font-serif font-bold tracking-tight leading-none">
                 About me
               </h2>
 
-              <p className="leading-7 pt-7 xl:text-xl">
+              <p className="leading-7 pt-7 xl:text-xl text-p3">
                 I’m a junior front-end developer looking for a new role in an
                 exciting company. I focus on writing accessible HTML, using
                 modern CSS practices and writing clean JavaScript. When writing
@@ -82,7 +82,18 @@ export default function Home() {
             <div className="mt-10">
               <button className="border p-4">go to portfolio</button>
             </div>
-            <div className="border-b my-8 sm:mb-0 border-p3 opacity-25" />
+            <div className="border-b mt-8 border-p3 opacity-25" />
+          </div>
+        </section>
+        <section className="flex flex-col items-center pt-20 pb-24 md:flex-row">
+          <h2 className="text-40 font-serif text-center leading-tight font-bold text-p3">
+            <span className="whitespace-no-wrap">Interested in doing a</span>{" "}
+            <br className="hidden md:block" />
+            <span className="whitespace-no-wrap">project together?</span>
+          </h2>
+          <div className="border-b mt-8 border-p3 opacity-25 w-full mx-8" />
+          <div className="mt-10">
+            <button className="border p-4 w-full">CONTACT ME</button>
           </div>
         </section>
       </main>
