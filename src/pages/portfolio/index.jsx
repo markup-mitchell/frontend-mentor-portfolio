@@ -18,7 +18,7 @@ const Portfolio = () => {
         </PortfolioArticle>
       </section>
       <section>
-        <PortfolioArticle reverse slug="bookmark">
+        <PortfolioArticle slug="bookmark" reverse>
           <>Bookmark</>
           <>
             This project required me to build a fully responsive landing page to

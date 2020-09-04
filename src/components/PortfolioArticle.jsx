@@ -1,13 +1,13 @@
 const ProjectImage = ({ slug }) => {
   return (
-    <div className="image-wrapper relative w-full sm:w-1/2 bg-p1 pb-r92 sm:pb-0 xl:h-auto">
+    <div className="image-wrapper relative w-full sm:w-1/2 pb-r92 sm:pb-0 flex  xl:h-auto">
       <picture>
         <source media="(min-width: 1024px)" srcSet="" />
         <source media="(min-width: 1024px)" srcSet="" />
         <source media="(min-width: 1024px)" srcSet="" />
         <img
           src={`images/portfolio/desktop/image-portfolio-${slug}@2x.jpg`}
-          className="absolute image-placeholder w-full h-full object-cover object-top xl:relative"
+          className="absolute image-placeholder w-full h-full object-cover object-top sm:relative"
         />
       </picture>
     </div>
@@ -16,7 +16,7 @@ const ProjectImage = ({ slug }) => {
 
 const ProjectSummary = ({ children }) => {
   return (
-    <div className="contentWrapper mt-6 sm:mt-0 w-full xl:flex flex-col xl:justify-between sm:w-1/2 lg:pl-24 xl:pl-32">
+    <div className="contentWrapper mt-6 sm:mt-0  w-full xl:flex flex-col xl:justify-between sm:w-1/2 lg:pl-24 xl:pl-32 self-stretch">
       <div className="lg:max-w-xs flex flex-col h-full justify-between">
         <hr className="text-p3 m-0 opacity-25" />
         <div className="py-6 md:mt-8 md:mb-12 lg:my-0">
@@ -35,9 +35,9 @@ const ProjectSummary = ({ children }) => {
 const PortfolioArticle = ({ reverse, children, slug }) => {
   return (
     <div
-      className={`flex ${
+      className={`space-y-6 sm:space-y-0 flex ${
         reverse ? 'flex-col-reverse' : 'flex-col'
-      } sm:flex-row sm:space-x-12`}
+      } sm:flex-row items-center sm:space-x-12`}
     >
       {reverse ? (
         <>
