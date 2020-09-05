@@ -1,4 +1,5 @@
 import PortfolioArticle from '../../components/PortfolioArticle';
+import CTA from '../../components/CTA';
 
 const Portfolio = () => {
   return (
@@ -58,6 +59,9 @@ const Portfolio = () => {
             VIEW PROJECT
           </button>
         </PortfolioArticle>
+      </section>
+      <section>
+        <CTA />
       </section>
     </>
   );
