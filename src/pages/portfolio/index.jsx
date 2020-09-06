@@ -1,7 +1,7 @@
 import PortfolioArticle from '../../components/PortfolioArticle';
 import CTA from '../../components/CTA';
 
-const Portfolio = () => {
+export default function Portfolio() {
   return (
     <>
       <section className="pb-16 md:pb-20">
@@ -65,6 +65,4 @@ const Portfolio = () => {
       </section>
     </>
   );
-};
-
-export default Portfolio;
+}
