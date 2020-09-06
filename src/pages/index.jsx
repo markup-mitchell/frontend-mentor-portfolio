@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import CTA from '../components/CTA';
+import ButtonLink from '../components/Links/ButtonLink';
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
               </h1>
             </div>
 
-            <button className="border p-4">About Me</button>
+            <ButtonLink destination="#about_me">About Me</ButtonLink>
           </div>
         </section>
 
@@ -64,7 +65,10 @@ export default function Home() {
           <div className="flex flex-col justify-between w-full sm:ml-8 md:ml-16 md:max-w-xs lg:max-w-sm lg:ml-24 xl:ml-32">
             <div className="border-b my-8 sm:mt-0 border-p3 opacity-25" />
             <div>
-              <h2 className="text-40 text-p3 font-serif font-bold tracking-tight leading-none">
+              <h2
+                id="about_me"
+                className="text-40 text-p3 font-serif font-bold tracking-tight leading-none"
+              >
                 About me
               </h2>
 
