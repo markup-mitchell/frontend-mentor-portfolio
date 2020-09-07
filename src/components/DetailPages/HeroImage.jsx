@@ -1,11 +1,21 @@
-export default function ({ heroAlt }) {
+export default function ({ heroAlt, projectName }) {
   return (
     <picture>
-      <source />
-      <source />
+      <source
+        media="(min-width: 1024px)"
+        srcSet={`../images/detail/desktop/image-${projectName}-hero@2x.jpg`}
+      />
+      <source
+        media="(min-width: 768px)"
+        srcSet={`../images/detail/tablet/image-${projectName}-hero@2x.jpg`}
+      />
+      <source
+        media="(min-width: 600px)"
+        srcSet={`../images/detail/tablet/image-${projectName}-hero.jpg`}
+      />
       <source />
       <img
-        src="../images/detail/mobile/image-manage-hero@2x.jpg"
+        src={`../images/detail/mobile/image-${projectName}-hero@2x.jpg`}
         alt={heroAlt}
       />
     </picture>

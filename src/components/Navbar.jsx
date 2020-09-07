@@ -1,19 +1,18 @@
-import Transition from "../Transition.js";
+import Transition from '../Transition.js';
 
-import MenuLinkMobile from "./Links/MenuLinkMobile";
-import MenuLink from "./Links/MenuLink";
-import IconButton from "./Buttons/IconButton.jsx";
-const Navbar = ({menuOpen, toggleMenu}) => {
+import MenuLinkMobile from './Links/MenuLinkMobile';
+import MenuLink from './Links/MenuLink';
+import IconButton from './Buttons/IconButton.jsx';
+const Navbar = ({ menuOpen, toggleMenu }) => {
   return (
     <div className="relative">
       <nav className="flex items-center justify-end sm:h-10">
         <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
           <div className="flex items-center justify-between w-full md:w-auto">
-
             <a href="#" aria-label="Home">
               <img
                 className="h-8 w-auto sm:h-10"
-                src="images/logo.svg"
+                src="../images/logo.svg"
                 alt="Logo"
               ></img>
             </a>
@@ -46,15 +45,9 @@ const Navbar = ({menuOpen, toggleMenu}) => {
         </div>
         {/* will space-x-10 work on ios? */}
         <div className="hidden md:flex md:space-x-10">
-          <MenuLink slug="/">
-            HOME
-          </MenuLink>
-          <MenuLink slug="/portfolio">
-            PORTFOLIO
-          </MenuLink>
-          <MenuLink slug="/contact">
-            CONTACT ME
-          </MenuLink>
+          <MenuLink slug="/">HOME</MenuLink>
+          <MenuLink slug="/portfolio">PORTFOLIO</MenuLink>
+          <MenuLink slug="/contact">CONTACT ME</MenuLink>
         </div>
       </nav>
       {/* mobile menu */}
@@ -69,52 +62,45 @@ const Navbar = ({menuOpen, toggleMenu}) => {
       >
         <div className="absolute top-0 right-0   transition transform origin-top-right md:hidden w-64 z-10">
           <div
-          className="bg-transparent overflow-hidden z-10"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="main-menu"
+            className="bg-transparent overflow-hidden z-10"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="main-menu"
           >
             <div className="flex items-center justify-end">
               <div className="-mr-3">
-                <IconButton
-                  ariaLabel="Close Menu"
-                  handler={toggleMenu}
-                >
+                <IconButton ariaLabel="Close Menu" handler={toggleMenu}>
                   <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="18"
-                  viewBox="-1 0 24 18"
-                  fill="currentColor"
-                  className="text-p3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="18"
+                    viewBox="-1 0 24 18"
+                    fill="currentColor"
+                    className="text-p3"
                   >
                     <path
                       fillRule="evenodd"
                       d="M17.132.661l.707.707L9.707 9.5l8.132 8.132-.707.707L9 10.207.868 18.34l-.707-.707L8.293 9.5.161 1.368.868.661 9 8.793 17.132.661z"
-                      />
+                    />
                   </svg>
                 </IconButton>
               </div>
             </div>
-            <div className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col items-center" role="menu">
+            <div
+              className="mt-6 pt-2 pb-10 bg-p3 text-s1 shadow-md flex flex-col items-center"
+              role="menu"
+            >
               {/* gap-y-X is not going to work on ios or safari, and will need fallback. build it so we don't need multiple implementations */}
               <div className="mt-8" role="menuitem">
-
-              <MenuLinkMobile href="/">
-                HOME
-              </MenuLinkMobile >
+                <MenuLinkMobile href="/">HOME</MenuLinkMobile>
               </div>
               <div className="mt-8">
-
-              <MenuLinkMobile href="/portfolio" role="menuitem">
-                PORTFOLIO
-              </MenuLinkMobile>
+                <MenuLinkMobile href="/portfolio" role="menuitem">
+                  PORTFOLIO
+                </MenuLinkMobile>
               </div>
               <div className="mt-8" role="menuitem">
-
-              <MenuLinkMobile href="/contact" >
-                CONTACT ME
-              </MenuLinkMobile>
+                <MenuLinkMobile href="/contact">CONTACT ME</MenuLinkMobile>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import ProjectBackground from '../../components/DetailPages/ProjectBackground';
 export default function Manage() {
   return (
     <>
-      <HeroImage alt="" />
+      <HeroImage projectName="manage" alt="" />
       <div className="mt-10 lg:mt-32 lg:flex ">
         <section className="lg:w-1/3">
           <ProjectSummary
@@ -17,6 +17,12 @@ export default function Manage() {
           <ProjectBackground
             projectName="manage"
             text="This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style."
+            static_preview_1_alt="
+            Screen showing thing
+            "
+            static_preview_2_alt="
+            Screen showing another thing
+            "
           />
         </section>
       </div>
