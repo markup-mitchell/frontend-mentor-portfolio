@@ -1,3 +1,5 @@
+const { default: ButtonLink } = require('./Links/ButtonLink');
+
 const CTA = () => {
   return (
     <div className="flex flex-col items-center pt-24 pb-24 xl:py-40 md:flex-row">
@@ -8,9 +10,7 @@ const CTA = () => {
       </h2>
       <div className="hidden md:block border-b border-p3 opacity-25 w-full mx-8" />
       <div className="mt-10 md:mt-0">
-        <button className="border p-4 w-full whitespace-no-wrap">
-          CONTACT ME
-        </button>
+        <ButtonLink destination="/contact">CONTACT ME</ButtonLink>
       </div>
     </div>
   );

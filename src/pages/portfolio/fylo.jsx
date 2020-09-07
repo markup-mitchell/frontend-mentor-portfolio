@@ -1,9 +1,9 @@
 import DetailsTemplate from './DetailsTemplate';
 
 const data = {
-  projectName: 'manage',
+  projectName: 'fylo',
   heroAlt: 'A longer and more detailed description that you might normally do',
-  summary_heading: 'Manage',
+  summary_heading: 'Fylo',
   summary_text:
     'This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.',
   background_text:
