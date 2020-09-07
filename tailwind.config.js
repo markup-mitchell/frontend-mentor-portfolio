@@ -33,7 +33,8 @@ module.exports = {
         7: '1.75rem',
         full: '100%',
         half: '50%',
-        r92: '92%'
+        r92: '92%',
+        footer: '23rem'
       },
       margin: {
         11: '3.5rem',

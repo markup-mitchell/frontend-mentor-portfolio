@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-auto">
-        <section className="sm:relative mb-24 xl:pb-40">
+        <section className="mb-24 sm:relative xl:pb-40">
           <picture>
             <source
               media="(min-width: 1440px)"
@@ -27,12 +27,12 @@ export default function Home() {
             <img
               src="images/homepage/mobile/image-homepage-hero@2x.jpg"
               alt="stock image of a desktop computer screen"
-              className="w-full object-cover"
+              className="object-cover w-full"
             ></img>
           </picture>
-          <div className="sm:absolute bottom-0 left-0 bg-white sm: max-w-lg">
+          <div className="bottom-0 left-0 max-w-lg bg-white sm:absolute sm:">
             <div className="pt-6 pb-8 sm:pt-11 sm:pb-12 sm:pr-11 xl:pb-11">
-              <h1 className="font-serif text-p3 text-40 xl:text-50 font-bold tracking-tight xl:tracking-normal leading-none">
+              <h1 className="font-serif font-bold leading-none tracking-tight text-p3 text-40 xl:text-50 xl:tracking-normal">
                 Hey, I'm Alex Spencer and I love building beautiful websites
               </h1>
             </div>
@@ -41,7 +41,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="sm:flex justify-between md:justify-start">
+        <section className="justify-between sm:flex md:justify-start">
           <picture className="object-contain">
             <source
               media="(min-width: 1440px)"
@@ -57,17 +57,17 @@ export default function Home() {
             />
             <img
               src="images/homepage/mobile/image-homepage-profile.jpg"
-              className="h-full w-full object-cover object-right md:flex-shrink-0"
+              className="object-cover object-right w-full h-full md:flex-shrink-0"
               alt="Alex Spencer in profile"
             ></img>
           </picture>
 
           <div className="flex flex-col justify-between w-full sm:ml-8 md:ml-16 md:max-w-xs lg:max-w-sm lg:ml-24 xl:ml-32">
-            <div className="border-b my-8 sm:mt-0 border-p3 opacity-25" />
+            <div className="my-8 border-b opacity-25 sm:mt-0 border-p3" />
             <div>
               <h2
                 id="about_me"
-                className="text-40 text-p3 font-serif font-bold tracking-tight leading-none"
+                className="font-serif font-bold leading-none tracking-tight text-40 text-p3"
               >
                 About me
               </h2>
@@ -86,12 +86,12 @@ export default function Home() {
             </div>
 
             <div className="mt-10">
-              <button className="border p-4">go to portfolio</button>
+              <button className="p-4 border">go to portfolio</button>
             </div>
-            <div className="border-b mt-8 border-p3 opacity-25" />
+            <div className="mt-8 border-b opacity-25 border-p3" />
           </div>
         </section>
-        <section>
+        <section className="pt-32 pb-24 md:py-24 xl:py-40">
           <CTA />
         </section>
       </main>

@@ -2,7 +2,7 @@ import HeroImage from '../../components/DetailPages/HeroImage';
 import ProjectSummary from '../../components/DetailPages/ProjectSummary';
 import ProjectBackground from '../../components/DetailPages/ProjectBackground';
 import NextPrevProject from '../../components/DetailPages/NextPrevProject';
-import next from 'next';
+import CTA from '../../components/CTA';
 
 export default function DetailsTemplate({
   projectName,
@@ -16,7 +16,7 @@ export default function DetailsTemplate({
   previous_project
 }) {
   return (
-    <>
+    <div className="">
       <HeroImage projectName={projectName} alt={heroAlt} />
       <div className="mt-10 lg:mt-32 lg:flex ">
         <section className="lg:w-1/3">
@@ -31,12 +31,15 @@ export default function DetailsTemplate({
           />
         </section>
       </div>
-      <nav>
+      <nav className="pt-16 md:pt-20 lg:pt-16 ">
         <NextPrevProject
           next_project={next_project}
           previous_project={previous_project}
         />
       </nav>
-    </>
+      <aside className="pt-16 pb-20 md:pt-20 md:pb-24 xl:pt-32 xl:pb-32">
+        <CTA />
+      </aside>
+    </div>
   );
 }
