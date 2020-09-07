@@ -1,8 +1,8 @@
-import HeroImage from '../../components/DetailPages/HeroImage';
-import ProjectSummary from '../../components/DetailPages/ProjectSummary';
-import ProjectBackground from '../../components/DetailPages/ProjectBackground';
-import NextPrevProject from '../../components/DetailPages/NextPrevProject';
-import CTA from '../../components/CTA';
+import HeroImage from './HeroImage';
+import ProjectSummary from './ProjectSummary';
+import ProjectBackground from './ProjectBackground';
+import NextPrevProject from './NextPrevProject';
+import CTA from '../CTA';
 
 export default function DetailsTemplate({
   projectName,

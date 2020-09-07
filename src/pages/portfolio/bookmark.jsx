@@ -1,4 +1,4 @@
-import DetailsTemplate from './DetailsTemplate';
+import DetailsTemplate from '../../components/DetailPages/DetailsTemplate';
 
 const data = {
   projectName: 'bookmark',

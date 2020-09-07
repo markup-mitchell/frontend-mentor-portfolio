@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import next from 'next';
 
 export default function NextPrevProject({ next_project, previous_project }) {
   const next_url = `/portfolio/${next_project.toLowerCase()}`;
