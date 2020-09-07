@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
           <link
             rel="preconnect"
             href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans:ital,wght@0,100;0,600;0,700;1,700&display=swap"
-            crossOrigin
+            crossOrigin="true"
           />
           <link
             rel="apple-touch-icon"
@@ -36,7 +36,7 @@ export default class Document extends NextDocument {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00b4b6" />
           <meta name="theme-color" content="#ffffff" />
           <noscript>
-            <style>*[style*="opacity: 0"]{opacity:1 !important}</style>
+            <link rel="stylesheet" href="noscript.css" />
           </noscript>
         </Head>
         <body>
