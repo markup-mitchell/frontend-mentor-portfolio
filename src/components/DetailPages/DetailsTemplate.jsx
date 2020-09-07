@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import HeroImage from './HeroImage';
 import ProjectSummary from './ProjectSummary';
 import ProjectBackground from './ProjectBackground';
@@ -16,7 +17,12 @@ export default function DetailsTemplate({
   previous_project
 }) {
   return (
-    <div className="">
+    <>
+      <Head>
+        <noscript>
+          <link rel="stylesheet" href="noscript.css" />
+        </noscript>
+      </Head>
       <HeroImage projectName={projectName} alt={heroAlt} />
       <div className="mt-10 lg:mt-32 lg:flex ">
         <section className="lg:w-1/3">
@@ -40,6 +46,6 @@ export default function DetailsTemplate({
       <aside className="pt-16 pb-20 md:pt-20 md:pb-24 xl:pt-32 xl:pb-32">
         <CTA />
       </aside>
-    </div>
+    </>
   );
 }
