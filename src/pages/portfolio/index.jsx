@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import PortfolioArticle from '../../components/PortfolioArticle';
 import CTA from '../../components/CTA';
 
