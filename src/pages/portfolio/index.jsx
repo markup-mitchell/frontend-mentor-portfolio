@@ -48,7 +48,7 @@ export default function Portfolio() {
           </>
         </PortfolioArticle>
       </section>
-      <section>
+      <section className="pt-32 pb-24 md:py-24 xl:py-40">
         <CTA />
       </section>
     </>
