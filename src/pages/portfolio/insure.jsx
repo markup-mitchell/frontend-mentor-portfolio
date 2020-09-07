@@ -15,5 +15,14 @@ const data = {
 };
 
 export default function () {
-  return <DetailsTemplate {...data} />;
+  return (
+    <>
+      <Head>
+        <noscript>
+          <link rel="stylesheet" href="noscript.css" />
+        </noscript>
+      </Head>
+      <DetailsTemplate {...data} />
+    </>
+  );
 }
