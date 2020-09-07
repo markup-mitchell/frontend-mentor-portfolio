@@ -6,12 +6,12 @@ export default function ({
 }) {
   return (
     <>
-      <h2 className="text-p3 font-serif text-3xl tracking-tight">
+      <h2 className="font-serif text-3xl tracking-tight text-p3">
         Project Background
       </h2>
-      <p className="mt-7 leading-loose text-p3">{text}</p>
+      <p className="leading-loose mt-7 text-p3">{text}</p>
 
-      <h2 className="mt-10 text-p3 font-serif text-3xl tracking-tight">
+      <h2 className="mt-10 font-serif text-3xl tracking-tight text-p3">
         Static Previews
       </h2>
       {/* STATIC PREVIEW 1 */}
@@ -60,10 +60,6 @@ export default function ({
             alt={static_preview_1_alt}
           />
         </picture>
-        {/* <img
-          src={`../images/detail/mobile/image-${projectName}-preview-2@2x.jpg`}
-          alt=""
-        /> */}
       </div>
     </>
   );
