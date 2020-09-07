@@ -20,7 +20,7 @@ export default function () {
     <>
       <Head>
         <noscript>
-          <link rel="stylesheet" href="noscript.css" />
+          <link rel="stylesheet" href="../noscript.css" />
         </noscript>
       </Head>
       <DetailsTemplate {...data} />
