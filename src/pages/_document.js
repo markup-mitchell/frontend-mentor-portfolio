@@ -35,6 +35,9 @@ export default class Document extends NextDocument {
           {/* <link rel="manifest" href="/manifest.json" /> */}
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00b4b6" />
           <meta name="theme-color" content="#ffffff" />
+          <noscript>
+            <style>*[style*="opacity: 0"]{opacity:1 !important}</style>
+          </noscript>
         </Head>
         <body>
           <Main />
