@@ -2,7 +2,7 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx}'],
   theme: {
     colors: {
-      p1: '#5FB4A2',
+      p1: 'rgb(0, 140, 114)',
       p2: '#203A4C',
       p3: '#33323D',
       s1: '#FAFAFA',
@@ -48,7 +48,7 @@ module.exports = {
         50: '3.125rem'
       },
       boxShadow: {
-        outline: '0 0 0 3px rgba(95, 180, 162, 0.5)'
+        outline: '0 0 0 3px rgba(0, 140, 114,0.5)'
       }
     }
   },

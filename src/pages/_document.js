@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
           <link
             rel="preconnect"
             href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans:ital,wght@0,100;0,600;0,700;1,700&display=swap"
-            crossorigin
+            crossOrigin
           />
           <link
             rel="apple-touch-icon"
