@@ -15,7 +15,7 @@ const data = {
   next_project: 'Manage'
 };
 
-export default function () {
+export default function fylo() {
   return (
     <>
       <Head>

@@ -15,7 +15,7 @@ const data = {
   next_project: 'Insure'
 };
 
-export default function () {
+export default function bookmark() {
   return (
     <>
       <Head>

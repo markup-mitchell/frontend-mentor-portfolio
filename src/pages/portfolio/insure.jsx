@@ -15,7 +15,7 @@ const data = {
   next_project: 'Fylo'
 };
 
-export default function () {
+export default function insure() {
   return (
     <>
       <Head>
