@@ -32,6 +32,7 @@ export default function ({
           <img
             src={`../images/detail/mobile/image-${projectName}-preview-1@2x.jpg`}
             alt={static_preview_2_alt}
+            loading="lazy"
           />
         </picture>
         {/* <img
@@ -58,6 +59,7 @@ export default function ({
           <img
             src={`../images/detail/mobile/image-${projectName}-preview-2@2x.jpg`}
             alt={static_preview_1_alt}
+            loading="lazy"
           />
         </picture>
       </div>

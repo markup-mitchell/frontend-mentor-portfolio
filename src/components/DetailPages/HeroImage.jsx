@@ -17,7 +17,6 @@ export default function heroImage({ heroAlt, projectName }) {
       <img
         src={`../images/detail/mobile/image-${projectName}-hero@2x.jpg`}
         alt={heroAlt}
-        loading="lazy"
       />
     </picture>
   );
