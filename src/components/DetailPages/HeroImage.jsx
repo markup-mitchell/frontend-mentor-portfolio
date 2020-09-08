@@ -1,4 +1,4 @@
-export default function ({ heroAlt, projectName }) {
+export default function heroImage({ heroAlt, projectName }) {
   return (
     <picture>
       <source
