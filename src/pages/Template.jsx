@@ -3,14 +3,14 @@ import Footer from '../components/Footer';
 
 const Template = ({ children, menuOpen, toggleMenu }) => {
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div className="relative flex flex-col min-h-screen bg-t3">
       {/* page layout */}
       <div className="w-full h-full px-8 pt-8 md:px-10 md:pt-16 xl:px-0">
-        <div className="max-w-6xl mx-auto relative">
+        <div className="relative max-w-6xl mx-auto">
           <header>
             <Navbar menuOpen={menuOpen} toggleMenu={toggleMenu} />
           </header>
-          <div className="mt-10 md:mt-12 xl:mt-16 h-full">{children}</div>
+          <div className="h-full mt-10 md:mt-12 xl:mt-16">{children}</div>
         </div>
       </div>
       <div className="w-full">

@@ -1,4 +1,4 @@
-export default function ({
+export default function ProjectBackground({
   text,
   projectName,
   static_preview_1_alt,

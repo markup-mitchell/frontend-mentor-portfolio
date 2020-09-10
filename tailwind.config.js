@@ -9,7 +9,8 @@ module.exports = {
       s2: '#EAEAEB',
       s3: '#F43030',
       t1: '#979797',
-      white: '#FFFFFF'
+      t2: '#e6e6e7',
+      white: '#f2f2f2'
     },
     fontFamily: {
       sans: [
